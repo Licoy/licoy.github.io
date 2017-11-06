@@ -1,3 +1,11 @@
-<html>Loading...<script>setTimeout(function(){
-    window.location='https://www.licoy.cn'
-  },3000)</script></html>
+<html><head><title>loading...</title></head><body>
+    TIPS : 还有<span id="now">5</span>秒即将跳转至憧憬点滴记忆，<a href="https://www.licoy.cn">点此立即进入</a>
+  </body><script>
+var NOW = 5;
+setTimeout(function(){
+    document.getElementById("now").innerHTML(--NOW);
+    if(NOW==0){
+        window.location='https://www.licoy.cn'
+    }
+  },1000)
+</script></html>
