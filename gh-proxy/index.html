@@ -10,6 +10,7 @@
     <style>
         body {
             text-align: center;
+            padding-top: 100px;
         }
 
         #title span {
@@ -24,6 +25,18 @@
         .btn-black {
             background-color: #000;
             color: #fff;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #footer a {
+            color: #64696d;
+            text-decoration: underline;
         }
     </style>
     <script>
@@ -62,6 +75,18 @@
             </div>
         </form>
     </div>
+    <div id="footer">
+        <span>项目基于开源 <a href="https://github.com/hunshcn/gh-proxy">GH-PROXY</a> 驱动支持，由 Cloudflare Workers 提供服务支持</span>
+    </div>
 </body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93920347-12"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-93920347-12');
+</script>
+
 
 </html>
