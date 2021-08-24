@@ -27,7 +27,7 @@
         }
     </style>
     <script>
-        function submit(e) {
+        function linkDownloadSubmit(e) {
             e.preventDefault()
             window.open('/' + document.getElementById("link").value);
             return false
@@ -46,10 +46,9 @@
         <span>Github 文件加速</span>
     </h1>
     <div id="main" class="container">
-        <form action="./" method="GET" target="_blank" onsubmit="submit">
+        <form action="./" method="GET" target="_blank" onsubmit="linkDownloadSubmit(event)">
             <div class="input-group">
-                <div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example"
-                    id="link-box">
+                <div class="input-control search-box search-box-circle has-icon-left has-icon-right" id="link-box">
                     <input id="link" type="search" class="form-control search-input"
                         placeholder="支持 Github 的 Release / Archive / Raw 文件，协议头可选"
                         pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$"
