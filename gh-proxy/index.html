@@ -11,6 +11,7 @@
         body {
             text-align: center;
             padding-top: 100px;
+            height: 100vh;
         }
 
         #title span {
@@ -28,15 +29,24 @@
         }
 
         #footer {
-            position: fixed;
-            bottom: 20px;
+            position: sticky;
+            top: calc(100% - 2.5em);
             text-align: center;
             width: 100%;
+            font-size: 10px;
         }
 
         #footer a {
             color: #64696d;
             text-decoration: underline;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .tal {
+            text-align: left;
         }
     </style>
     <script>
@@ -74,10 +84,25 @@
                 </span>
             </div>
         </form>
+        <div class="alert alert-inverse mt20 tal">
+            <p>1. GitHub链接可选填协议，支持Release/Archive及文件。</p>
+            <p>2. 不支持项目文件夹。</p>
+            <p>3. 禁止滥用，此项目为免费支持请合理使用。</p>
+            <p>4. 合法输入如：</p>
+            <p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>4.1
+                https://github.com/kubernetes/kubernetes/archive/refs/tags/v1.22.1.zip</p>
+            <p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>4.2
+                https://github.com/kubernetes/kubernetes/releases/download/v1.22.1/kubernetes.tar.gz</p>
+            <p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>4.3
+                https://github.com/kubernetes/kubernetes/blob/v1.23.0-alpha.1/LICENSES/LICENSE</p>
+        </div>
     </div>
     <div id="footer">
-        <span>项目基于开源 <a href="https://github.com/hunshcn/gh-proxy">GH-PROXY</a> 驱动支持，由 Cloudflare Workers 提供服务支持</span>
+        <span>项目基于开源项目<a rel="nofollow" href="https://github.com/hunshcn/gh-proxy">GH-PROXY</a>驱动支持，由
+            CloudflareWorkers
+            提供服务支持</span>
     </div>
+
 </body>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93920347-12"></script>
 <script>
